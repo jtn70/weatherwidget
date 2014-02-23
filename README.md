@@ -8,7 +8,7 @@ dmd -release -O -inline application.d window.d drawingarea.d forecast.d kxml/xml
      There is an error with the DMD linker, the only solution is to build the project with:
      -release -O -inline
  
-Run with: ./weatherwidget -x=20 -y=500
+Run with: ./weatherwidget -x=10 -y=900 -location='Norway/Hordaland/Bergen/Bergen/'
  
 Authors: 
 Jens Torgeir Næss, jtn70 at hotmail dot com
