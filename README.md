@@ -32,3 +32,15 @@ GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+Weatherdata from yr.no:
+The data provided by http://www.yr.no is free but the following restrictions
+apply:
+- The contents must be marked with: Weather forecast from yr.no, delivered by the Norwegian Meteorological Institute and the NRK.
+- The marking must be in the same font size as the rest of the text, and be visible for the viewer. The marking must be situated with the rest of the forecast.
+- The text must be a link to the actual page the weather is from, example: http://www.yr.no/stad/Noreg/Rogaland/Stavanger/Stavanger/. If more than one place is displayed, all the places must be clickable to yr.no. The XML file has specified what you should use and what page that should be linked.
+- The data must be cached for 10 minutes
+- See http://om.yr.no/verdata/vilkar/ for further/extended usage information.
+
+Artwork:
+This software uses artwork created by VClouds, http://vclouds.deviantart.com/art/VClouds-Weather-2-179058977. The art is licensed under CC (Creative Commons). See accompanying license file cc.license for further details. The artwork may not be used for commercial purposes.
