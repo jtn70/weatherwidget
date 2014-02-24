@@ -34,15 +34,13 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
- // dmd application.d window.d drawingarea.d -L-lphobos2 -L-lgtkd-2 -ofweatherwidget
-
 module weatherwidget;
 
 import window;
 
 import std.stdio;
 import std.getopt;
-//import std.conv;
+import std.conv;
 
 import gtk.Main;
 import gtk.MainWindow;
@@ -63,12 +61,14 @@ void main(string[] args)
 {
     bool ver = false;
     bool hlp = false;
+    string argxpos;
+    string argypos;
 
     Main.init(args);
 
     getopt(args,
-        "xpos|x", &windowxpos,
-        "ypos|y", &windowypos,
+        "xpos|x", &argxpos,
+        "ypos|y", &argypos,
         "help|h", &hlp,
         "version|v", &ver,
         "weatherservice|w", &weatherservice,
@@ -85,6 +85,11 @@ void main(string[] args)
         showVersion();
         return;
     }
+
+    if (argxpos != "")
+        windowxpos = to!int(argxpos);
+    if (argypos != "")
+        windowypos = to!int(argypos);
 
     if (weatherservice == "" || location == "")
     {
