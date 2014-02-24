@@ -29,6 +29,7 @@
 
 import weatherwidget;
 import drawingarea;
+import about;
 
 import std.string;
 import std.conv;
@@ -39,10 +40,12 @@ import gdk.Visual;
 
 import gtk.Main;
 import gtk.MainWindow;
+import gtk.AboutDialog;
 import gtk.Widget;
 import gtk.DrawingArea;
 import gtk.Menu;
 import gtk.MenuItem;
+import gtk.SeparatorMenuItem;
 
 class WeatherWindow : MainWindow
 {
@@ -58,7 +61,11 @@ class WeatherWindow : MainWindow
         // Initialize popup menu
         popupmenu = new Menu();
         MenuItem menuQuitItem = new MenuItem("Quit");
+        MenuItem menuAboutItem = new MenuItem("About");
+        menuAboutItem.addOnButtonRelease(&onAbout);
         menuQuitItem.addOnButtonRelease(&onQuit);
+        popupmenu.append(menuAboutItem);
+        popupmenu.append(new SeparatorMenuItem());
         popupmenu.append(menuQuitItem);
 
         // Turn transparency on
@@ -98,6 +105,25 @@ class WeatherWindow : MainWindow
             if (buttonEvent.button == 1)
             {
                 Main.quit();
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public bool onAbout(Event event, Widget widget)
+    {
+        if (event.type == EventType.BUTTON_RELEASE)
+        {
+            GdkEventButton* buttonEvent = event.button;
+
+            if (buttonEvent.button == 1)
+            {
+                AboutDialog about = new About();
+
+                about.showAll();
+                
+
                 return true;
             }
         }
