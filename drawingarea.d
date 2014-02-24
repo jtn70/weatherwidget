@@ -48,7 +48,7 @@ import pango.PgFontDescription;
 
 class MainDrawingArea : DrawingArea
 {
-    const string weekdayname[] = 
+    static string weekdayname[] = 
         ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     forecast wfc;
     ImageSurface wicon;
