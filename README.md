@@ -4,11 +4,11 @@ weatherwidget
 A window on the desktop with weather information
 
 Compile with: 
-dmd -release -O -inline application.d window.d drawingarea.d forecast.d kxml/xml.d -L-lphobos2 -L-lcurl -L-lgtkd-2 -ofweatherwidget  
+dmd -release -O -inline application.d window.d drawingarea.d forecast.d about.d kxml/xml.d -L-lphobos2 -L-lcurl -L-lgtkd-2 -ofweatherwidget  
      There is an error with the DMD linker, the only solution is to build the project with:
      -release -O -inline
  
-Run with: ./weatherwidget -x=10 -y=900 -location='Norway/Hordaland/Bergen/Bergen/'
+Run with: ./weatherwidget --xpos=10 --ypos=900 --location='Norway/Hordaland/Bergen/Bergen/'
  
 Authors: 
 Jens Torgeir Næss, jtn70 at hotmail dot com
