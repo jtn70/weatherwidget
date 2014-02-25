@@ -77,9 +77,9 @@ class WeatherWindow : MainWindow
         // Set various gtk window settings
         setAppPaintable(true);
         setDecorated(false);
-        setKeepBelow(false);
+        setKeepBelow(true);
         setSkipTaskbarHint(true);
-        setSkipPagerHint(false);
+        setSkipPagerHint(true);
         setAcceptFocus(true);
 
         // Set default window size and move the window
@@ -122,7 +122,7 @@ class WeatherWindow : MainWindow
                 AboutDialog about = new About();
 
                 about.showAll();
-                
+
 
                 return true;
             }
