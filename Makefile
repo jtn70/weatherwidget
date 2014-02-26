@@ -1,6 +1,6 @@
 # Define DMD as compiler
 CC = dmd
-CFLAGS = -c
+CFLAGS = -c -release -inline
 LFLAGS = -release -O -inline
 LIBS = -L-lphobos2 -L-lcurl -L-lgtkd-2
 APP = weatherwidget
