@@ -6,7 +6,7 @@
  * Compile with: 
  *  dmd -release -O -inline application.d window.d drawingarea.d forecast.d kxml/xml.d -L-lphobos2 -L-lcurl -L-lgtkd-2 -ofweatherwidget  
  *     There is an error with the DMD linker, the only solution is to build the project with:
- *     -release -O -inline
+ *     -release
  * 
  * Run with: ./weatherwidget -x=20 -y=500
  * 
