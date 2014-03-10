@@ -121,8 +121,8 @@ class WeatherWindow : MainWindow
             {
                 AboutDialog about = new About();
 
-                about.showAll();
-
+                about.run();
+                about.hide();
 
                 return true;
             }
